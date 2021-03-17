@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(209, 205, 205);
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+header{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: palevioletred;
+    position: relative;
+}
+header .img-wrapper{
+    width: 100%;
+    height: 100%;  
+}
+header .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.titulo{
+    position:absolute;
+    top: 30%;
+    left: 42%;
+    color: aliceblue;
+    font-size: 40px;
+}
+.titulo p{
+    font-size: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.menu{
+    width: 8em;
+    position:absolute;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    font-size: 20px;
+}
+.menu div :hover{
+    border-bottom: 5px solid white;
+}
+.active{
+    border-bottom: 5px solid white;
+}
+#procurar{
+    height: 80px;
+    width: 100%;
+    background-color:rebeccapurple;
+    display: flex;
+    align-items: center;
+}
+#procurar div{
+    margin-left: 7em;
+}
+#procurar div :hover{
+    border-bottom: 5px solid white;
+}
+    /* 
+------------------------section--card------------------------------------------------------- */
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.card{
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-right: 110px;
+    height: 400px;
+    width: 250px;
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+.card:hover{
+    box-shadow: 10px 10px 10px rgb(102, 99, 99);
+}
+.card .img-wrapper{
+    width: 100%;
+    height: 80%;
+}
+.card .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card .img-wrapper i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: aliceblue;
+    background-color: blueviolet;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+.sinopse{
+    padding: 20px;
+}
+.numero-nota{
+    margin-left: 7px;
+}
+.card .nota{
+    display: flex;
+}
+.card .nota i{
+    color: rgb(235, 217, 60);
+}
+.card .nome{
+    margin-top: 5px;
+    font-size: 25px;
+}
+/* -------------section--cadastro--------------------------------------------------------------- */
+.cadastrar{
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 1em;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(102, 99, 99);
+    display: flex;
+    justify-content: start;
+}
+.field{
+    border: none;
+    width: 30rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid grey;
+    height: 3rem;
+    outline: none;
+    margin: 2rem 0;
+}
+.input-group{
+    position: relative;
+    margin-left: 2em;
+}
+.field-label{
+    position: absolute;
+    left:0;
+    top: 1rem;
+}
+#nota{
+    width: 8rem;
+}
+#capa{
+    width: 116px;
+}
+.capa{
+    margin-top: 1em;
+}
+.btn-cadastro{
+    width: 400px;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+.btn{
+    height: 45px;
+    width: 130px;
+    background-color:blueviolet;
+    border: none;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.btn-cadastro .btn:hover{
+    color:blueviolet;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
