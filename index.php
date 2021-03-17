@@ -1,4 +1,44 @@
 <?php include "cabeçalho.php" ?>
+<?php 
+$filme1 = [
+    "titulo"=>"Coringa",
+    "nota"=>8.6,
+    "sinopse"=>"Arthur Fleck trabalha como palhaço para uma agência 
+    de talentos e, toda semana, precisa comparecer a uma 
+    agente social, devido aos seus conhecidos problemas
+    mentais. Após ser demitido, Fleck reage mal à gozação
+    de três homens em pleno metrô e os mata. Os 
+    assassinatos iniciam um movimento popular contra 
+    a elite de Gotham City, da qual Thomas Wayne é seu 
+    maior representante",
+    "poster"=>"https://www.themoviedb.org/t/p/original/xLxgVxFWvb9hhUyCDDXxRPPnFck.jpg"
+];
+$filme2 = [
+    "titulo"=>"Avengers: Endgame",
+    "nota"=>8.6,
+    "sinopse"=>"Após os eventos devastadores de 'Vingadores: Guerra 
+    Infinita', o universo está em ruínas devido aos esforços
+     do Titã Louco, Thanos. Com a ajuda de aliados
+      remanescentes, os Vingadores devem se reunir mais 
+      uma vez a fim de desfazer as ações de Thanos e 
+      restaurar a ordem no universo de uma vez por todas,
+       não importando as consequências.",
+    "poster"=>"https://www.themoviedb.org/t/p/original/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg"
+];
+$filme3 = [
+    "titulo"=>"Harry Potter e a pedra Filosofal",
+    "nota"=>8.6,
+    "sinopse"=>"Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos. Inicialmente, Harry é impedido de ler a carta por seu tio, mas logo recebe a visita de Hagrid, o guarda-caça de Hogwarts, que chega para levá-lo até a escola. Harry adentra um mundo mágico que jamais imaginara, vivendo diversas aventuras com seus novos amigos, Rony Weasley e Hermione Granger.",
+    "poster"=>"https://www.themoviedb.org/t/p/original/qnw9610ojLT0jU3lMSZOAFttt1e.jpg"
+];
+$filme4 = [
+    "titulo"=>"Parasita",
+    "nota"=>8.6,
+    "sinopse"=>"Toda a família de Ki-taek está desempregada, vivendo num porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês à garota de uma família rica. Fascinados com a vida luxuosa destas pessoas, pai, mãe, filho e filha bolam um plano para se infiltrarem também na família burguesa, um a um. No entanto, os segredos e mentiras necessários à ascensão social custarão caro a todos.",
+    "poster"=>"https://www.themoviedb.org/t/p/original/igw938inb6Fy0YVcwIyxQ7Lu5FO.jpg"
+];
+$filmes = [$filme1,$filme2,$filme3,$filme4];
+?>
 <body>
     <header>
         <div class="img-wrapper">
@@ -17,59 +57,26 @@
         <div class="assistidos"><a href="#assistidos">Assistidos</a></div>
         <div class="favoritos"><a href="#favoritos">Favoritos</a></div>
     </section>
+<!-- -------------------cards----------------------------------------------- -->
     <section class="cards">
+    <?php foreach($filmes as $filme){ ?>
         <div class="card">
             <div class="img-wrapper">
-                <img src="https://www.themoviedb.org/t/p/original/xLxgVxFWvb9hhUyCDDXxRPPnFck.jpg" alt="">
+                <img src="<?php echo $filme["poster"]?>" alt="">
                 <i class="far fa-heart"></i>
             </div>
             <div class="sinopse">
                 <div class="nota">
                     <i class="fas fa-star"></i>
-                    <div class="numero-nota">9.6</div>
+                    <div class="numero-nota"><?php echo $filme["nota"]?></div>
                 </div>
-                <div class="nome">Coringa</div>
+                <div class="nome"><?php echo $filme["titulo"]?></div>
+                <div class="descricao">
+                    <p><?php echo $filme["sinopse"]?></p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="https://www.themoviedb.org/t/p/original/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg" alt="">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="sinopse">
-                <div class="nota">
-                    <i class="fas fa-star"></i>
-                    <div class="numero-nota">9.6</div>
-                </div>
-                <div class="nome">Avengers</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="https://www.themoviedb.org/t/p/original/qnw9610ojLT0jU3lMSZOAFttt1e.jpg" alt="">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="sinopse">
-                <div class="nota">
-                    <i class="fas fa-star"></i>
-                    <div class="numero-nota">9.6</div>
-                </div>
-                <div class="nome">Harry Potter</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="https://www.themoviedb.org/t/p/original/igw938inb6Fy0YVcwIyxQ7Lu5FO.jpg" alt="">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="sinopse">
-                <div class="nota">
-                    <i class="fas fa-star"></i>
-                    <div class="numero-nota">9.6</div>
-                </div>
-                <div class="nome">Parasita</div>
-            </div>
-        </div>
+        <?php } ?>
     </section>
 </body>
 </html>

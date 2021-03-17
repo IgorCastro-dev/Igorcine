@@ -74,11 +74,12 @@ header .img-wrapper img{
     
 }
 .card{
+    margin-bottom: 10px;
     margin-top: 20px;
     margin-left: 110px;
     margin-right: 110px;
-    height: 400px;
     width: 250px;
+    height: fit-content;
     position: relative;
     background-color: aliceblue;
     border-radius: 15px;
@@ -88,7 +89,7 @@ header .img-wrapper img{
 }
 .card .img-wrapper{
     width: 100%;
-    height: 80%;
+    height: 350px;
 }
 .card .img-wrapper img{
     width: 100%;
